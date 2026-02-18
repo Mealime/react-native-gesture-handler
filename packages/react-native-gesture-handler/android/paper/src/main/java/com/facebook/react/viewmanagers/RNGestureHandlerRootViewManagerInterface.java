@@ -10,8 +10,9 @@
 package com.facebook.react.viewmanagers;
 
 import android.view.View;
-import com.facebook.react.uimanager.ViewManagerWithGeneratedInterface;
 
-public interface RNGestureHandlerRootViewManagerInterface<T extends View> extends ViewManagerWithGeneratedInterface {
+// RN 0.77 removed `ViewManagerWithGeneratedInterface`; it was only a marker interface used by
+// codegen. We don't need it for compilation or runtime behavior.
+public interface RNGestureHandlerRootViewManagerInterface<T extends View> {
   void setUnstable_forceActive(T view, boolean value);
 }
